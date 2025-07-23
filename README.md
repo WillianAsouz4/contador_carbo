@@ -33,7 +33,7 @@ contador_carboidratos/
 1. **Clone o repositório e instale as dependências:**
 
    ```sh
-   git clone <url-do-repositorio>
+   git clone https://github.com/WillianAsouz4/contador_carbo.git
    cd contador_carboidratos
    python -m venv venv
    source venv/bin/activate
