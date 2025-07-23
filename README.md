@@ -58,7 +58,6 @@ contador_carboidratos/
 ## Observações
 
 - O banco de dados é salvo na pasta `data/` e os relatórios em `reports/`.
-- O campo de data/hora das refeições está no formato brasileiro: `DD/MM/YYYY HH:MM:SS`.
 - Para inserir valores decimais de carboidratos, use ponto ou vírgula (ex: `12.5` ou `12,5`).
 
 ## Requisitos
