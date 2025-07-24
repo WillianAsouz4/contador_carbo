@@ -3,8 +3,8 @@ import pandas as pd
 from .database import conectar
 from datetime import datetime
 
-def gerar_relatorio_mensal(mes_str, reports_dir):
-    with conectar() as conn:
+def gerar_relatorio_mensal(db_path, mes_str, reports_dir):
+    with conectar(db_path) as conn:
         query = """
             SELECT 
                 alimento AS Alimento,

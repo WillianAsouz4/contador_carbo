@@ -1,20 +1,21 @@
 import sqlite3
 import os
 
+# Define o caminho absoluto para a raiz do projeto
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # Define o nome da pasta e do arquivo do banco de dados
-DB_FOLDER = 'data'
-DB_FILE = os.path.join(DB_FOLDER, 'carboidratos.db')
+DB_FILE = os.path.join(PROJECT_ROOT, 'data', 'carboidratos.db')
 
-def create_database():
+def create_database(db_path=DB_FILE):
     """
     Cria o banco de dados e a tabela 'refeicoes' se eles não existirem.
     """
     # Garante que a pasta 'data' exista
-    os.makedirs(DB_FOLDER, exist_ok=True)
+    os.makedirs(os.path.dirname(db_path), exist_ok=True)
     conn = None
     try:
         # Conecta ao banco de dados (cria o arquivo se não existir)
-        conn = sqlite3.connect(DB_FILE)
+        conn = sqlite3.connect(db_path)
         cursor = conn.cursor()
 
         print("Conectado ao banco de dados.")

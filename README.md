@@ -12,20 +12,22 @@ Este é um sistema em Python para registrar, consultar e gerar relatórios do co
 
 ```
 contador_carboidratos/
-│
-├── controller/              # Lógica principal do sistema
-│   ├── database.py          # Funções de acesso ao banco de dados
-│   ├── reports.py           # Geração de relatórios mensais
-│   ├── ui.py                # Funções de interface com o usuário (inputs)
-│   ├── menu.py              # Menu principal do sistema
-│   └── models.py            # Modelos de dados (ex: Meal)
-│
-├── data/                    # Arquivos do banco de dados (ignorado no git)
-├── reports/                 # Relatórios gerados (ignorado no git)
-├── database_setup.py        # Script para criar o banco de dados
-├── main.py                  # Ponto de entrada do sistema
-├── requirements.txt         # Dependências do projeto
-└── README.md                # Este arquivo
+├── src/
+│   └── controller/
+│       ├── __init__.py
+│       ├── database.py
+│       ├── menu.py
+│       ├── reports.py
+│       └── ui.py
+├── data/
+│   └── carboidratos.db
+├── reports/
+├── .gitignore
+├── database_setup.py
+├── main.py
+└── requirements.txt
+
+
 ```
 
 ## Como usar
